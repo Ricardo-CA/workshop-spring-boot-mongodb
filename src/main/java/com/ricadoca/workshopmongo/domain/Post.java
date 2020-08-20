@@ -31,6 +31,7 @@ public class Post implements Serializable {
 		this.tittle = tittle;
 		this.body = body;
 		this.author = author;
+		
 	}
 
 	public String getId() {
