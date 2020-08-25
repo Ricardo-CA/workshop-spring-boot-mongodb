@@ -12,10 +12,10 @@ import com.ricadoca.workshopmongo.domain.Post;
 public interface PostRepository extends MongoRepository<Post, String>{
 
 	
-	@Query("{ 'Title': { $regex: ?0, $options: 'i' } }")
+	@Query("{ 'title': { $regex: ?0, $options: 'i' } }")
 	List<Post> searchTitle(String text);
 	
-	List<Post> findByTittleContainingIgnoreCase(String text);
+	List<Post> findByTitleContainingIgnoreCase(String text);
 	
 	
 }

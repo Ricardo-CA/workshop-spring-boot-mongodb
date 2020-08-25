@@ -15,29 +15,29 @@ import com.ricadoca.workshopmongo.dto.CommentDTO;
 public class Post implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private String id;
 	private Date date;
-	private String tittle;
+	private String title;
 	private String body;
-	
+
 	private AuthorDTO author;
-	
+
 	private List<CommentDTO> comments = new ArrayList<>();
-	
+
 	public Post() {
-		
+
 	}
 
-	public Post(String id, Date date, String tittle, String body,AuthorDTO author) {
+	public Post(String id, Date date, String title, String body, AuthorDTO author) {
 		super();
 		this.id = id;
 		this.date = date;
-		this.tittle = tittle;
+		this.title = title;
 		this.body = body;
 		this.author = author;
-		
+
 	}
 
 	public String getId() {
@@ -56,12 +56,12 @@ public class Post implements Serializable {
 		this.date = date;
 	}
 
-	public String getTittle() {
-		return tittle;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTittle(String tittle) {
-		this.tittle = tittle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getBody() {
@@ -108,6 +108,5 @@ public class Post implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
+
 }

@@ -35,7 +35,7 @@ public class PostResource {
 	public ResponseEntity<List<Post>> findByTitle(@RequestParam(value = "text",defaultValue = "") String text) {
 
 		text = URL.decodeParam(text);
-		List<Post> obj = service.findByTittle(text);
+		List<Post> obj = service.findByTitle(text);
 
 		return ResponseEntity.ok().body(obj);
 	}
